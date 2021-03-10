@@ -1,0 +1,37 @@
+{
+  "name": "foodapp",
+  "version": "1.0.0",
+  "description": "Website for a cafe.",
+  "main": "svr.js",
+  "type": "module",
+  "scripts": {
+    "stage1": "cd stages/1 && node --experimental-modules svr.mjs",
+    "stage2": "cd stages/2 && node --experimental-modules svr.mjs",
+    "test": "npm run lint",
+    "lint": "eslint stages --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gavinrufus/foodAppwithStages.git"
+  },
+  "author": "Gavin <up905189@myport.ac.uk>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gavinrufus/foodAppwithStages/issues"
+  },
+  "homepage": "https://github.com/gavinrufus/foodAppwithStages#readme",
+  "dependencies": {
+    "eslint-config-portsoc": "^0.8.1",
+    "multer": "^1.4.2",
+    "pg": "^8.5.1",
+    "sqlite": "^3.0.3",
+    "sqlite3": "^5.0.2",
+    "uuid-random": "^1.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.7"
+  }
+}
