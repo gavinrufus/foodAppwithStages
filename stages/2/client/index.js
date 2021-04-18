@@ -16,7 +16,7 @@ async function loadItems() {
   if (response.ok) {
     items = await response.json();
   } else {
-    items = ['failed to load messages :-('];
+    items = ['failed to load items'];
   }
 
   const itemlist = document.querySelector('#itemslist');
