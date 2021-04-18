@@ -4,10 +4,10 @@ const app = express();
 app.use(express.static('client'));
 
 const items = [
-  'All Items',
-  'Cold Drinks',
-  'Hot Drinks',
-  'Quick Bites',
+  'Cola',
+  'Milk Shake',
+  'Ice cream',
+  'Cake',
 ];
 
 app.get('/items', (req, res) => {
