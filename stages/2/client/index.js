@@ -2,21 +2,21 @@ function removeContentFrom(what) {
   what.textContent = '';
 }
 
-function showMessages(Items, where) {
-  for (const Item of Items) {
+function showMessages(items, where) {
+  for (const item of items) {
     const li = document.createElement('li');
-    li.textContent = Item;
+    li.textContent = item;
     where.append(li);
   }
 }
 
 async function loadItems() {
-  const response = await fetch('Items');
-  let Items;
+  const response = await fetch('items');
+  let items;
   if (response.ok) {
-    Items = await response.json();
+    items = await response.json();
   } else {
-    Items = ['failed to load messages :-('];
+    items = ['failed to load messages :-('];
   }
 
   const itemlist = document.querySelector('#itemslist');
