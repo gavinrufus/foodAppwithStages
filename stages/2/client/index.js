@@ -19,7 +19,7 @@ async function loadItems() {
     items = ['failed to load items'];
   }
 
-  const itemlist = document.querySelector('#itemslist');
+  const itemlist = document.querySelector('#itemlist');
   removeContentFrom(itemlist);
   showItems(items, itemlist);
 }
