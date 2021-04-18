@@ -2,7 +2,7 @@ function removeContentFrom(what) {
   what.textContent = '';
 }
 
-function showMessages(items, where) {
+function showItems(items, where) {
   for (const item of items) {
     const li = document.createElement('li');
     li.textContent = item;
@@ -21,7 +21,7 @@ async function loadItems() {
 
   const itemlist = document.querySelector('#itemslist');
   removeContentFrom(itemlist);
-  showIteams(items, itemlist);
+  showItems(items, itemlist);
 }
 
 function pageLoaded() {
