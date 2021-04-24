@@ -9,6 +9,18 @@ function showMessages(items, where) {
     const li = document.createElement('li');
     li.textContent = item;
     where.append(li);
+
+    li.addEventListener('mouseenter', showFilterItems);
+  }
+}
+
+async function showFilterItems(e) {
+  const response = await fetch('items/' + e.target.dataset.id);
+  if (response.ok) {
+    const searchItems = await response.json();
+    const p = document.createElement('p');
+    removeContentFrom(el.filterItems);
+    el.filterItems.append(p);
   }
 }
 
@@ -54,6 +66,7 @@ function prepareHandles() {
   el.itemlist = document.querySelector('#itemlist');
   el.item = document.querySelector('#item');
   el.search = document.querySelector('#search');
+  el.filterItems = document.querySelector('#filterItems');
 }
 
 function addEventListeners() {
