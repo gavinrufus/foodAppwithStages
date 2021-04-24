@@ -4,14 +4,14 @@ const app = express();
 app.use(express.static('client'));
 
 const items = [
-    'All Items',
-    'Cold Drinks',
-    'Hot Drinks',
-    'Quick Bites',
-  ];
-  
-  app.get('/items', (req, res) => {
-    res.json(items);
-  });
+  'Cola',
+  'Milk Shake',
+  'Ice cream',
+  'Cake',
+];
+
+app.get('/items', (req, res) => {
+  res.json(items);
+});
 
 app.listen(3000);

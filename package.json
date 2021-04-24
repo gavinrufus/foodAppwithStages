@@ -7,6 +7,7 @@
   "scripts": {
     "stage1": "cd stages/1 && node --experimental-modules svr.mjs",
     "stage2": "cd stages/2 && node --experimental-modules svr.mjs",
+    "stage3": "cd stages/2 && node --experimental-modules svr.mjs",
     "test": "npm run lint",
     "lint": "eslint stages --fix"
   },
