@@ -1,15 +1,17 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Bon Appetite Cafeteria</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <div class="wrapper">
             <div class="logo">
-                <a href="Home.html"><img src="images/logo.png"  alt="BAlogo"></a>
+                <a href="Home.html"><img src="images/logo.png" alt="BAlogo"></a>
             </div>
             <ul class="nav-bar">
                 <li><a href="Home.html">Home</a></li>
@@ -20,56 +22,14 @@
         </div>
 
         <div class="cart-page">
-            <table>
+            <table id = "cart-table">
                 <tr>
                     <th>Product</th>
                     <th>Quantity</th>
                     <th>Subtotal</th>
                 </tr>
-                <tr>
-                    <td>
-                        <div class="cart-info">
-                            <img src="images/Colddrinks/AppleJuice.jpg">
-                            <div>
-                                <h3>Apple Juice</h3>
-                                <small>Price: 21 QAR</small>
-                                </br>
-                                <a href="">Remove</a>
-                        </div>
-                    </td>
-                    <td><input type="number" value="1"</td>
-                    <td>QAR 21</td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="cart-info">
-                            <img src="images/Colddrinks/AvocadoJuice.jpg">
-                            <div>
-                                <h3>Avocado Juice</h3>
-                                <small>Price: 21 QAR</small>
-                                </br>
-                                <a href="">Remove</a>
-                        </div>
-                    </td>
-                    <td><input type="number" value="1"</td>
-                    <td>QAR 21</td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="cart-info">
-                            <img src="images/Colddrinks/PomegranateJuice.jpg">
-                            <div>
-                                <h3>Pomegranate Juice</h3>
-                                <small>Price: 21 QAR</small>
-                                </br>
-                                <a href="">Remove</a>
-                        </div>
-                    </td>
-                    <td><input type="number" value="1"</td>
-                    <td>QAR 21</td>
-                </tr>
             </table>
-    
+<button onclick="addItemToCart(1,'images/Colddrinks/AppleJuice.jpg','Apple Juice', 21)">Add to cart</button>
             <div class="total-price">
                 <table>
                     <tr>
@@ -86,7 +46,8 @@
         <div class="inner-footer">
             <div class="social-links">
                 <ul>
-                    <li class="social-items"><a href="https://www.instagram.com/bonappetite.qa/"><img src="images/instalogo.png"></i></a></li>
+                    <li class="social-items"><a href="https://www.instagram.com/bonappetite.qa/"><img
+                                src="images/instalogo.png"></i></a></li>
                 </ul>
             </div>
             <div class="quick-links">
@@ -105,4 +66,5 @@
         </div>
     </footer>
 </body>
+<script src="index.js"></script>
 </html>
