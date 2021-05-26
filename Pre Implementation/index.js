@@ -69,13 +69,6 @@ let cartItems = [
         productName: "Apple Juice",
         price: 21
     },
-    {
-        productId: 3,
-        imageUrl: "images/Colddrinks/AvocadoJuice.jpg",
-        productName: "Avocado Juice",
-        price: 23
-    },
-  
 ]
 
 displayCartItems(cartItems)
