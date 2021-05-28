@@ -10,7 +10,7 @@ let addItemToCart = (productId, imageUrl, productName, price) => {
                 <div>
                     <h3>${productName}</h3>
                     <small>Price: QAR ${price}</small><br>
-                    <a href="">Remove</a>
+                    <a onClick="removeItem(${productId})">Remove</a>
                 </div>
         </div>
     </td>
@@ -18,7 +18,12 @@ let addItemToCart = (productId, imageUrl, productName, price) => {
     <td id="sub_${productId}">QAR ${price}</td> 
     `
     cartTable.appendChild(cartItem)
-    console.log(cartItem)
+    console.log(window.sessionStorage.getItem("cartItems"))
+    let cartItems = JSON.parse(window.sessionStorage.getItem("cartItems")) || []
+    cartItems.push(productId)
+    window.sessionStorage.setItem("cartItems", JSON.stringify(cartItems))
+    let x = window.sessionStorage.getItem("cartItems")
+    console.log(x)
 }
 
 let displayCartItems = (cartItems) => {
@@ -34,7 +39,7 @@ let displayCartItems = (cartItems) => {
                 <div>
                     <h3>${item.productName}</h3>
                     <small>Price: QAR ${item.price}</small><br>
-                    <a href="">Remove</a>
+                    <a onClick="removeItem(${item.productId})">Remove</a>
                 </div>
         </div>
     </td>
@@ -56,6 +61,9 @@ let changeTotalPrice = (subtotal, productId) => {
     let changeTotalPrice = subtotal
 }
 
+let removeItem = (productId) => {
+    console.log(productId)
+}
 let cartItems = [
     {
         productId: 1,
@@ -72,4 +80,3 @@ let cartItems = [
 ]
 
 displayCartItems(cartItems)
-

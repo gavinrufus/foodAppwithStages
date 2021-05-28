@@ -7,7 +7,7 @@
 }
 header{
     background-color:rgb(241, 238, 233);
-    height: 100 ;
+    min-height: 95vh ;
     position: relative;
 }
 .nav-bar{
@@ -195,4 +195,7 @@ th:last-child{
 .small-container img{
     margin-top: 150px;
     width: 30%;
+}
+a:hover{
+    cursor: pointer;
 }
